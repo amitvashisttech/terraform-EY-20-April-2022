@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_resource_group" "green" {
-  name     = "Green-RG"
+  name     = "Orange-RG"
   location = "eastus"
 }
 
