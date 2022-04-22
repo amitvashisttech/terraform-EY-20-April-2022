@@ -1,7 +1,7 @@
 # Create a Resource Group
 resource "azurerm_resource_group" "blue" {
   count    = 1 
-  name     = "BlueTest-RG-${count.index +1}"
+  name     = "Blue-Prod-RG-${count.index +1}"
   location = "eastus"
   tags = {
     Owner = "Amit Vashist" 
