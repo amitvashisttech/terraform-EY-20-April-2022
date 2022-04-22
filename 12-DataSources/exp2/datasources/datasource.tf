@@ -10,9 +10,10 @@ output "resourcedetails" {
 }
 
 
-data "azurerm_resources" "networkinterface" {
+data "azurerm_network_interface" "networkinterface" {
+  name = "example-nic"
   resource_group_name = "example-resources-RG"
-  type = "Microsoft.Network/networkInterfaces"
+  #type = "Microsoft.Network/networkInterfaces"
 }
 
 
@@ -22,7 +23,7 @@ data "azurerm_resources" "vmname" {
 }
 
 output "networkinterface" { 
-  value = data.azurerm_resources.networkinterface.resources.*.name
+  value = data.azurerm_network_interface.networkinterface.id
 }
 
 
